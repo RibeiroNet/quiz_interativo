@@ -1,19 +1,21 @@
-import questions from "../..data/question"
-import styles from "./QuestionCard.module.css";
+import React from "react"
+import styles from "./QuestionCard.module.css"
 
-export default function Questions () {
-    const questionList = questions.map(questions => (
-        <div key={questionList.id}>
-        <span className="pergunta">{question.question}</span>
-        <span className="opção">{question.options}</span>
-        </div>
-    ));
-
-    return (
-        <div className="questions-container">
-            {questionList}
-        </div>
-    );
-};
-
-
+export default function QuestionCard({ question, onAnswer }) {
+  return (
+    <div className={styles.card}>
+      <h2>{question.question}</h2>
+      <div>
+        {question.options.map((option, index) => (
+          <button
+            key={index}
+            onClick={() => onAnswer(option)}
+            className={styles.option}
+          >
+            {String.fromCharCode(65 + index)} - {option}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}

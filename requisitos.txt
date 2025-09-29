@@ -1,0 +1,58 @@
+
+
+1. useState e useEffect
+2. Passagem de props
+3. CSS Modules
+4. Componentes por responsabilidade
+5. Manipulação de tempo e estado
+
+Requisitos Funcionais
+O Quiz deve conter 10 questões, cada uma com 5 opções (A, B, C, D, E).
+
+O componente Header deve exibir:
+1. Título do quiz
+2. Questão atual / total de questões
+3. Timer da questão
+4. O timer deve iniciar em cada questão e reiniciar ao passar para a
+próxima.
+5. Cada questão deve ter botões para as respostas, centralizados, com
+letras A, B, C, D, E.
+6. Ao clicar em uma resposta, o quiz deve avançar para a próxima questão.
+7. Layout usando CSS Modules
+
+Componente QuestionCard
+É responsável por exibir o enunciado da questão e suas alternativas de resposta
+durante o quiz. Ele organiza visualmente a pergunta e cria botões para cada
+opção, permitindo que o usuário escolha uma delas.
+
+Requisitos Funcionais
+1. Exibir o enunciado da questão em destaque.
+2. Listar as alternativas como botões clicáveis, cada uma prefixada com
+as letras A, B, C, D, E.
+3. Ao clicar em um botão, chamar próxima pergunta e guardar a resposta
+selecionada
+
+
+Componente ScoreBoard
+O componente ScoreBoard deve exibir o resultado do quiz após o usuário
+responder todas as questões.
+
+Requisitos Funcionais
+Exibir cada questão respondida organizar em um card ou tabela.
+
+Para cada questão, mostrar:
+
+1. Enunciado da questão
+2. Resposta escolhida pelo usuário
+3. Resposta correta
+4. Pontuação da questão
+5. Tempo gasto para responder
+6. Destacar visualmente:
+7. Perguntas corretas em verde
+8. Perguntas incorretas em vermelho
+
+Exibir resumo no topo:
+9. Pontuação final (soma das pontuações das questões corretas)
+10.Menor tempo de resposta
+11.Total de acertos e percentual de acertos
+12.Incluir um botão “Reiniciar Quiz” para reiniciar a atividade.

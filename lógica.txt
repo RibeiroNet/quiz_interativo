@@ -1,0 +1,31 @@
+App.jsx
+O componente App é o controlador principal, mantém todos os estados que os demais componentes utilizam
+currentQuestion: índice da questão atual de 0 a 9
+answers: lista de objetos contendo as respostas do usuário { id, userAnswer, correctAnswer, isCorrect, timeSpent }
+timeRemaining: tempo que falta para responder a questão atual
+score: pontuação acumulada
+quizFinished: valor booleano que indica se o quiz terminou
+
+handleAnswer: salva a resposta do usuário, verifica se está correta, calcula o tempo gasto e avança para a próxima questão
+resetQuiz(): limpa todos os estados e reinicia o quiz do zero
+nextQuestion(): avança o índice de currentQuestion e reinicia o timer
+
+Header
+mostra informações gerais do quiz
+
+Props recebidas:
+currentQuestion
+totalQuestions
+timeRemaining
+
+Informações exibidas:
+Título do quiz
+atual em relação ao total
+timer
+
+QuestionCard
+Este componente é responsável por exibir uma questão por vez
+Props recebidas:
+question objeto que contém enunciado e opções de resposta
+onAnswer função do App que registra a resposta
+

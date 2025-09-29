@@ -1,5 +1,3 @@
-
-
 1. useState e useEffect
 2. Passagem de props
 3. CSS Modules

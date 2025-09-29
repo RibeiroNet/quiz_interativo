@@ -1,16 +1,41 @@
-# React + Vite
+Objetivo do Projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um quiz interativo desenvolvido em React com o propósito de aplicar conceitos importantes do React, como useState, useEffect, passagem de props, CSS Modules, e manipulação de tempo e estado. O quiz conta com 10 questões de múltipla escolha sobre React, onde o usuário interage com uma interface de perguntas, respostas e temporizador, além de obter um resultado no final com a pontuação, tempo gasto e acertos.
 
-Currently, two official plugins are available:
+Header
+O componente Header exibe as informações da questão atual, o total de questões, e o temporizador de cada questão.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+QuestionCard
+O componente QuestionCard é responsável por exibir o enunciado da questão e suas alternativas de resposta, além de gerenciar a seleção de uma resposta e avançar para a próxima questão.
 
-## React Compiler
+ScoreBoard
+O componente ScoreBoard exibe o resultado do quiz após o usuário responder todas as questões. Ele mostra o desempenho detalhado do usuário, incluindo as respostas corretas, incorretas e o tempo gasto em cada questão.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A estrutura do projeto está organizada da seguinte forma:
+src/
+├─ components/
+│  ├─ Header/
+│  │  ├─ index.jsx
+│  │  └─ Header.module.css
+│  ├─ QuestionCard/
+│  │  ├─ index.jsx
+│  │  └─ QuestionCard.module.css
+│  ├─ ScoreBoard/
+│  │  ├─ index.jsx
+│  │  └─ ScoreBoard.module.css
+├─ data/
+│  └─ questions.js
+├─ App.jsx
+├─ App.module.css
+├─ main.jsx
 
-## Expanding the ESLint configuration
+Como Executar o Quiz
+1. Clonar o repositório
+git clone https://github.com/seu-usuario/quiz-react.git
+cd quiz-react
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Instalar as dependências
+npm install
+
+3. Inicie o projeto com o comando:
+npm start
